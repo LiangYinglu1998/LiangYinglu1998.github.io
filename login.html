@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link type="text/css"rel="stylesheet" href="webDesign.css">
+</head>
+<body>
+        <div id="header_index">
+            <h1>
+                <a href="index.html" id="logo" title="Makeup on-line Share"">
+                <img alt="logo" src="image/logo.png">Makeup on-line Share</a>          
+            </h1>              
+            <div id="search">
+                <input type="text" placeholder="typical search" value="">
+                <img alt="typical search" src="image/search.png" style="padding-left:3px;">
+            </div>           
+            <div id="login_register">
+                <a href="login.html">
+                    <span class="login_span">
+                        <strong>登录</strong>
+                    </span>
+                </a>
+                <a href="register.html">
+                    <span class="login_span">
+                        <strong>注册</strong>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="login_method">
+            <ul class="method_part">
+                <li class="method" onclick="isHidden('biaodan_1','biaodan_2')"><span class="login_span_1"><strong>密码登录</strong></span></li>
+                <li class="method" onclick="isHidden('biaodan_2','biaodan_1')"><span class="login_span_1"><strong>验证码登录</strong></span></li>
+            </ul>
+        </div>
+        <div id="biaodan_part">
+        <div class="biaodan" id="biaodan_1" >       
+        <form method="post" action="">           
+            <div>
+                <label for="phone">手机号/邮箱</label>
+                <input type="text" class="login_input" id="phone" name="phone" placeholder="phone number/email">
+            </div>
+            <br>
+            <div>
+                <label for="password">密码</label>
+                <input type="password" class="login_input" id="password" name="password" placeholder="password">
+            </div>
+            <button type="submit" ><strong>登录</strong></button>
+            <a href="index.html">随便看看</a>
+        </form>
+        </div>
+        <div class="biaodan" id="biaodan_2" style="display: none;">       
+        <form method="post" action="">           
+            <div>
+                <label for="phone">手机号</label>
+                <input type="text" class="login_input" id="phone" name="phone" placeholder="phone number">
+            </div>
+            <br>
+            <div id="quali_link">
+                <label for="qualification">验证码</label>
+                <input type="text" class="login_input" id="qualification" name="qualification" >
+                <a  href="#">获取验证码</a>
+            </div>
+            <button type="submit" ><strong>登录</strong></button>
+            
+        </form>
+        </div>
+        </div>
+        
+<script>
+    function isHidden(oDiv,oDiv_1){
+        var vDiv = document.getElementById(oDiv);
+        var vDiv_1 = document.getElementById(oDiv_1);
+        vDiv_1.style.display = 'none';
+        vDiv.style.display = 'block';       
+    }
+
+</script>
+</body>
+</html>
